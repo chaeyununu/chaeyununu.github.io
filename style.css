@@ -12,6 +12,54 @@ body {
   min-height: 100vh;
 }
 
+/* ==================== 언어 전환 버튼 ==================== */
+
+.lang-toggle {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  border-radius: 999px;
+  padding: 4px 10px;
+  backdrop-filter: blur(12px);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  padding: 2px 4px;
+  border-radius: 999px;
+  transition: color 0.18s ease, background 0.18s ease;
+  font-family: inherit;
+}
+
+.lang-btn:hover {
+  color: #94a3b8;
+}
+
+.lang-btn.active {
+  color: #e0f2fe;
+  background: rgba(56, 189, 248, 0.15);
+}
+
+.lang-divider {
+  font-size: 0.7rem;
+  color: #334155;
+  user-select: none;
+}
+
+/* ==================== 공통 ==================== */
+
 /* 공통 오버레이 기본은 숨김 */
 .overlay {
   position: fixed;
@@ -659,3 +707,4 @@ canvas {
     text-align: left;
   }
 }
+
