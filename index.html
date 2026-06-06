@@ -6,8 +6,6 @@
   <title>chaeyununu | 채유누누 프로젝트 모음</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Google / Bing 검색용 핵심 정보 -->
-
   <meta name="description" content="chaeyununu, 채유누누의 개인 GitHub Pages 메인 페이지. 채유누누의 밤 드라이브, diner, 역사핑 onecard history 등 인터랙티브 웹 프로젝트를 모아둔 개인 웹사이트입니다.">
   <meta name="author" content="chaeyununu">
   <meta name="creator" content="chaeyununu">
@@ -16,11 +14,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="googlebot" content="index, follow">
 
-  <!-- 대표 메인 주소 -->
-
   <link rel="canonical" href="https://chaeyununu.github.io/">
-
-  <!-- Open Graph -->
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="chaeyununu">
@@ -29,13 +23,9 @@
   <meta property="og:url" content="https://chaeyununu.github.io/">
   <meta property="og:locale" content="ko_KR">
 
-  <!-- Twitter / X Preview -->
-
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="chaeyununu | 채유누누 프로젝트 모음">
   <meta name="twitter:description" content="채유누누 chaeyununu의 개인 웹사이트. 밤 드라이브, diner, 역사핑 프로젝트를 모아둔 메인 페이지입니다.">
-
-  <!-- 폰트 -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,8 +36,6 @@
 
   <link rel="stylesheet" href="style.css" />
   <script src="app.js" defer></script>
-
-  <!-- 구조화 데이터: chaeyununu 대표 페이지 + 프로젝트 연결 -->
 
   <script type="application/ld+json">
   {
@@ -113,7 +101,6 @@
 </head>
 
 <body>
-  <!-- 검색엔진/스크린리더용 메인 설명: 화면에는 안 보임 -->
   <header class="sr-only">
     <h1>chaeyununu | 채유누누 프로젝트 모음</h1>
     <p>
@@ -138,21 +125,14 @@
 
   </header>
 
-  <!-- 언어 전환 버튼 -->
-
   <div id="lang-toggle" class="lang-toggle">
     <button id="lang-kr" class="lang-btn active" onclick="setLang('kr')">KR</button>
     <span class="lang-divider">|</span>
     <button id="lang-en" class="lang-btn" onclick="setLang('en')">EN</button>
   </div>
 
-  <!-- 1단계: 현실–꿈 위치 테스트 -->
-
-  <!-- 인트로 + 질문 플로우 -->
-
   <section id="test-flow" class="overlay">
     <div id="test-panel" class="panel">
-      <!-- STEP 1: 현실–꿈 바만 보여주는 인트로 -->
       <div class="flow-step active" data-step="1">
         <h1 class="intro-title" data-i18n="introTitle">현실–꿈 위치 테스트</h1>
         <p class="intro-text" data-i18n="introText">
@@ -176,12 +156,10 @@
     </p>
   </div>
 
-  <!-- 질문 -->
   <div class="flow-step" data-step="2">
     <h2 id="question-title" class="question-title"></h2>
     <p id="question-text" class="question-main-text"></p>
 
-    <!-- 현실 vs 꿈 -->
     <div id="question-pair" class="question-pair">
       <div class="question-side">
         <p class="side-tag reality-tag" data-i18n="labelReality">현실 쪽</p>
@@ -193,7 +171,6 @@
       </div>
     </div>
 
-    <!-- 슬라이더 -->
     <div class="question-scale-labels">
       <span data-i18n="scaleLeft">왼쪽 문장에 더 가깝다</span>
       <span data-i18n="scaleRight">오른쪽 문장에 더 가깝다</span>
@@ -224,11 +201,8 @@
 
   </section>
 
-  <!-- 결과 -->
-
   <section id="result" class="overlay">
     <div id="result-panel" class="panel">
-      <!-- RESULT 1 -->
       <div class="result-step active" data-step="1">
         <h2 data-i18n="resultTitle">당신의 위치</h2>
 
@@ -250,31 +224,26 @@
     </div>
   </div>
 
-  <!-- 오늘의 행동 한 가지 -->
   <div class="result-step" data-step="2">
     <h2 data-i18n="resultAction">오늘의 행동 한 가지</h2>
     <p id="action-text" class="action-text-large"></p>
   </div>
 
-  <!-- 오늘을 위한 장면 하나 -->
   <div class="result-step" data-step="3">
     <h2 data-i18n="resultScene">오늘을 위한 장면 하나</h2>
     <p id="scene-text" class="scene-text scene-large"></p>
   </div>
 
-  <!-- 다른 자리들도 이렇게 흐릅니다 -->
   <div class="result-step" data-step="4">
     <h2 data-i18n="resultOtherBands">다른 자리들도 이렇게 흐릅니다</h2>
     <div id="bands-summary" class="bands-summary"></div>
   </div>
 
-  <!-- 이 자리에서 앞으로 -->
   <div class="result-step" data-step="5">
     <h2 data-i18n="resultFuture">이 자리에서 앞으로</h2>
     <p id="future-text" class="future-text"></p>
   </div>
 
-  <!-- 마지막 문장 -->
   <div class="result-step" data-step="6">
     <h2 data-i18n="resultClosingTitle">오늘의 위치를 지나며</h2>
     <p class="closing" data-i18n="resultClosing">
@@ -292,11 +261,8 @@
 
   </section>
 
-  <!-- 2단계: 기운 지도 테스트 -->
-
   <section id="energy-test" class="overlay">
     <div id="energy-panel" class="panel energy-panel">
-      <!-- 5문항 -->
       <div class="energy-step active" data-step="1">
         <h2 class="energy-title" data-i18n="energyTitle">당신의 내면 에너지 지도</h2>
         <p class="energy-desc" data-i18n="energyDesc">
@@ -331,7 +297,6 @@
     <button id="energy-next" class="primary-btn energy-next-btn" data-i18n="btnNext">다음</button>
   </div>
 
-  <!-- 오각형 속 점 결과 -->
   <div class="energy-step" data-step="2">
     <h2 class="energy-title" data-i18n="energyBalanceTitle">지금의 균형점</h2>
     <p class="energy-desc center" data-i18n="energyBalanceDesc">
@@ -343,14 +308,12 @@
     </p>
   </div>
 
-  <!-- 로딩 -->
   <div class="energy-step" data-step="3">
     <h2 class="energy-title" data-i18n="energyLoadingTitle">흐름은 이어집니다..</h2>
     <p class="energy-desc center"></p>
     <div class="energy-loading-circle"></div>
   </div>
 
-  <!-- 부유하는 점 애니메이션 -->
   <div class="energy-step" data-step="4">
     <h2 class="energy-title" data-i18n="energyFlowTitle">흐름을 관찰하세요</h2>
     <canvas id="energy-flow-canvas" width="520" height="520"></canvas>
@@ -359,7 +322,6 @@
     </p>
   </div>
 
-  <!-- 한 문장 -->
   <div class="energy-step" data-step="5">
     <h2 class="energy-title" data-i18n="energyFinalTitle">오늘의 한 문장</h2>
     <p id="energy-final-line" class="energy-final-line"></p>
