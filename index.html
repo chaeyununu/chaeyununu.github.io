@@ -1,36 +1,183 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>don't be stressed</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="chaeyununu의 기말 과제 웹사이트.">
- 
+
+  <!-- Google / Bing 검색용 핵심 정보 -->
+
+  <title>chaeyununu | 채유누누의 개인 웹사이트</title>
+  <meta name="description" content="chaeyununu, 채유누누의 개인 GitHub Pages 웹사이트. 인터랙티브 웹 프로젝트, 감성 테스트, 채유누누의 밤 드라이브, 디자인 실험을 모아둔 메인 페이지입니다.">
+  <meta name="author" content="chaeyununu">
+  <meta name="creator" content="chaeyununu">
+  <meta name="publisher" content="chaeyununu">
+  <meta name="keywords" content="chaeyununu, 채유누누, 채유누누의 밤 드라이브, 밤 드라이브, night drive, nightdrive, interactive website, GitHub Pages, web design, personal website, stress test, 감성 웹사이트">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow">
+
+  <!-- 대표 메인 주소 -->
+
+  <link rel="canonical" href="https://chaeyununu.github.io/">
+
+  <!-- Open Graph: 링크 공유 / 검색 미리보기용 -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="chaeyununu">
+  <meta property="og:title" content="chaeyununu | 채유누누의 개인 웹사이트">
+  <meta property="og:description" content="chaeyununu, 채유누누의 개인 GitHub Pages 웹사이트. 인터랙티브 웹 프로젝트와 채유누누의 밤 드라이브를 볼 수 있는 메인 페이지입니다.">
+  <meta property="og:url" content="https://chaeyununu.github.io/">
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- Twitter / X 미리보기 -->
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="chaeyununu | 채유누누의 개인 웹사이트">
+  <meta name="twitter:description" content="채유누누 chaeyununu의 개인 웹사이트. 인터랙티브 웹 프로젝트와 밤 드라이브 작업을 모아둔 메인 페이지입니다.">
+
   <!-- 폰트 -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
- 
+
   <link rel="stylesheet" href="style.css" />
   <script src="app.js" defer></script>
+
+  <!-- 구조화 데이터: Google/Bing이 chaeyununu 대표 페이지로 이해하게 하는 신호 -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "chaeyununu",
+    "alternateName": [
+      "채유누누",
+      "chaeyununu personal website",
+      "채유누누의 개인 웹사이트"
+    ],
+    "url": "https://chaeyununu.github.io/",
+    "description": "chaeyununu, 채유누누의 개인 GitHub Pages 웹사이트. 인터랙티브 웹 프로젝트, 감성 테스트, 채유누누의 밤 드라이브, 디자인 실험을 모아둔 메인 페이지입니다.",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "chaeyununu",
+      "url": "https://chaeyununu.github.io/",
+      "sameAs": [
+        "https://github.com/chaeyununu"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "WebSite",
+        "name": "채유누누의 밤 드라이브!",
+        "url": "https://chaeyununu.github.io/nightdrives-demomix-/",
+        "description": "채유누누 chaeyununu가 만든 인터랙티브 밤 드라이브 웹사이트."
+      },
+      {
+        "@type": "WebSite",
+        "name": "CHANGMO",
+        "url": "https://chaeyununu.github.io/CHANGMO/"
+      },
+      {
+        "@type": "WebSite",
+        "name": "diner",
+        "url": "https://chaeyununu.github.io/diner/"
+      },
+      {
+        "@type": "WebSite",
+        "name": "Feelgorithm Reading Crew",
+        "url": "https://chaeyununu.github.io/Feelgorithm_Reading-Crew/"
+      }
+    ],
+    "inLanguage": "ko-KR"
+  }
+  </script>
+
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .chaeyununu-project-link {
+      position: fixed;
+      left: 20px;
+      bottom: 18px;
+      z-index: 9999;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 12px;
+      line-height: 1.6;
+      opacity: 0.72;
+      color: rgba(255, 255, 255, 0.88);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      mix-blend-mode: difference;
+    }
+
+    .chaeyununu-project-link:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  </style>
+
 </head>
- 
-<h1>chaeyununu</h1>
+
 <body>
- 
+  <!-- 검색엔진/스크린리더용 메인 제목 -->
+  <header class="sr-only">
+    <h1>chaeyununu | 채유누누의 개인 웹사이트</h1>
+    <p>
+      chaeyununu, 채유누누의 개인 GitHub Pages 메인 페이지입니다.
+      이곳에서는 감성 테스트 웹사이트, 인터랙티브 웹 프로젝트, 채유누누의 밤 드라이브,
+      디자인 실험과 개인 웹 작업을 볼 수 있습니다.
+    </p>
+    <nav aria-label="chaeyununu project links">
+      <a href="https://chaeyununu.github.io/nightdrives-demomix-/">
+        채유누누의 밤 드라이브! | chaeyununu
+      </a>
+      <a href="https://chaeyununu.github.io/CHANGMO/">CHANGMO project</a>
+      <a href="https://chaeyununu.github.io/diner/">diner project</a>
+      <a href="https://chaeyununu.github.io/Feelgorithm_Reading-Crew/">Feelgorithm Reading Crew</a>
+    </nav>
+  </header>
+
+  <!-- 실제 화면에 아주 작게 보이는 대표 프로젝트 링크 -->
+
+<a
+class="chaeyununu-project-link"
+href="https://chaeyununu.github.io/nightdrives-demomix-/"
+aria-label="채유누누의 밤 드라이브 페이지로 이동"
+
+>
+
+```
+채유누누의 밤 드라이브! — chaeyununu
+```
+
+  </a>
+
   <!-- 언어 전환 버튼 -->
+
   <div id="lang-toggle" class="lang-toggle">
     <button id="lang-kr" class="lang-btn active" onclick="setLang('kr')">KR</button>
     <span class="lang-divider">|</span>
     <button id="lang-en" class="lang-btn" onclick="setLang('en')">EN</button>
   </div>
- 
+
   <!-- 1단계: 현실–꿈 위치 테스트 -->
- 
+
   <!-- 인트로 + 질문 플로우 -->
+
   <section id="test-flow" class="overlay">
     <div id="test-panel" class="panel">
       <!-- STEP 1: 현실–꿈 바만 보여주는 인트로 -->
@@ -40,133 +187,141 @@
           지금 나는 현실과 꿈 사이 어디쯤에 서 있는지,<br />
           조용히 확인해보는 작은 테스트입니다.
         </p>
- 
-        <div class="axis-wrapper axis-intro">
-          <div class="axis-labels">
-            <span data-i18n="labelReality">현실 쪽</span>
-            <span data-i18n="labelDream">꿈/내면 쪽</span>
-          </div>
-          <div class="axis-track">
-            <div class="axis-thumb axis-thumb-center"></div>
-          </div>
-        </div>
- 
-        <p class="intro-subnote" data-i18n="introSubnote">
-          아직 점수는 없습니다. 지금은 그저, 이 축 위 어딘가에 서 있는 나를 떠올려 보는 시간입니다.
-        </p>
+
+```
+    <div class="axis-wrapper axis-intro">
+      <div class="axis-labels">
+        <span data-i18n="labelReality">현실 쪽</span>
+        <span data-i18n="labelDream">꿈/내면 쪽</span>
       </div>
- 
-      <!-- 질문  -->
-      <div class="flow-step" data-step="2">
-        <h2 id="question-title" class="question-title"></h2>
-        <p id="question-text" class="question-main-text"></p>
- 
-        <!-- 현실 vs 꿈  -->
-        <div id="question-pair" class="question-pair">
-          <div class="question-side">
-            <p class="side-tag reality-tag" data-i18n="labelReality">현실 쪽</p>
-            <p id="question-left" class="side-text"></p>
-          </div>
-          <div class="question-side">
-            <p class="side-tag dream-tag" data-i18n="labelDream">꿈/내면 쪽</p>
-            <p id="question-right" class="side-text"></p>
-          </div>
-        </div>
- 
-        <!-- 슬라이더 -->
-        <div class="question-scale-labels">
-          <span data-i18n="scaleLeft">왼쪽 문장에 더 가깝다</span>
-          <span data-i18n="scaleRight">오른쪽 문장에 더 가깝다</span>
-        </div>
- 
-        <input
-          id="question-slider"
-          type="range"
-          min="0"
-          max="100"
-          value="50"
-          class="question-slider"
-        />
- 
-        <p class="question-value">
-          <span data-i18n="currentPosition">지금 위치:</span> <span id="question-value">50</span> / 100
-        </p>
- 
-        <button id="next-btn" type="button" class="primary-btn" data-i18n="btnNext">다음</button>
+      <div class="axis-track">
+        <div class="axis-thumb axis-thumb-center"></div>
       </div>
     </div>
- 
-    <p id="flow-hint" class="click-hint" data-i18n="hintStart">
-      빈 공간을 클릭하면 테스트가 시작됩니다.
+
+    <p class="intro-subnote" data-i18n="introSubnote">
+      아직 점수는 없습니다. 지금은 그저, 이 축 위 어딘가에 서 있는 나를 떠올려 보는 시간입니다.
     </p>
+  </div>
+
+  <!-- 질문 -->
+  <div class="flow-step" data-step="2">
+    <h2 id="question-title" class="question-title"></h2>
+    <p id="question-text" class="question-main-text"></p>
+
+    <!-- 현실 vs 꿈 -->
+    <div id="question-pair" class="question-pair">
+      <div class="question-side">
+        <p class="side-tag reality-tag" data-i18n="labelReality">현실 쪽</p>
+        <p id="question-left" class="side-text"></p>
+      </div>
+      <div class="question-side">
+        <p class="side-tag dream-tag" data-i18n="labelDream">꿈/내면 쪽</p>
+        <p id="question-right" class="side-text"></p>
+      </div>
+    </div>
+
+    <!-- 슬라이더 -->
+    <div class="question-scale-labels">
+      <span data-i18n="scaleLeft">왼쪽 문장에 더 가깝다</span>
+      <span data-i18n="scaleRight">오른쪽 문장에 더 가깝다</span>
+    </div>
+
+    <input
+      id="question-slider"
+      type="range"
+      min="0"
+      max="100"
+      value="50"
+      class="question-slider"
+    />
+
+    <p class="question-value">
+      <span data-i18n="currentPosition">지금 위치:</span>
+      <span id="question-value">50</span> / 100
+    </p>
+
+    <button id="next-btn" type="button" class="primary-btn" data-i18n="btnNext">다음</button>
+  </div>
+</div>
+
+<p id="flow-hint" class="click-hint" data-i18n="hintStart">
+  빈 공간을 클릭하면 테스트가 시작됩니다.
+</p>
+```
+
   </section>
- 
-  <!-- 결과  -->
+
+  <!-- 결과 -->
+
   <section id="result" class="overlay">
     <div id="result-panel" class="panel">
-      <!-- RESULT 1-->
+      <!-- RESULT 1 -->
       <div class="result-step active" data-step="1">
         <h2 data-i18n="resultTitle">당신의 위치</h2>
- 
-        <div class="axis-wrapper">
-          <div class="axis-labels">
-            <span data-i18n="labelReality">현실 쪽</span>
-            <span data-i18n="labelDream">꿈/내면 쪽</span>
-          </div>
-          <div class="axis-track">
-            <div class="axis-thumb" id="axis-thumb"></div>
-          </div>
-        </div>
- 
-        <div class="result-main">
-          <div id="score-pill" class="score-pill"></div>
-          <p id="band-label" class="band-label"></p>
-          <p id="message" class="message"></p>
-        </div>
+
+```
+    <div class="axis-wrapper">
+      <div class="axis-labels">
+        <span data-i18n="labelReality">현실 쪽</span>
+        <span data-i18n="labelDream">꿈/내면 쪽</span>
       </div>
- 
-      <!-- 오늘의 행동 한 가지 -->
-      <div class="result-step" data-step="2">
-        <h2 data-i18n="resultAction">오늘의 행동 한 가지</h2>
-        <p id="action-text" class="action-text-large"></p>
+      <div class="axis-track">
+        <div class="axis-thumb" id="axis-thumb"></div>
       </div>
- 
-      <!-- 오늘을 위한 장면 하나 -->
-      <div class="result-step" data-step="3">
-        <h2 data-i18n="resultScene">오늘을 위한 장면 하나</h2>
-        <p id="scene-text" class="scene-text scene-large"></p>
-      </div>
- 
-      <!--다른 자리들도 이렇게 흐릅니다 -->
-      <div class="result-step" data-step="4">
-        <h2 data-i18n="resultOtherBands">다른 자리들도 이렇게 흐릅니다</h2>
-        <div id="bands-summary" class="bands-summary"></div>
-      </div>
- 
-      <!--이 자리에서 앞으로(방향) -->
-      <div class="result-step" data-step="5">
-        <h2 data-i18n="resultFuture">이 자리에서 앞으로</h2>
-        <p id="future-text" class="future-text"></p>
-      </div>
- 
-      <!-- 마지막 문장 -->
-      <div class="result-step" data-step="6">
-        <h2 data-i18n="resultClosingTitle">오늘의 위치를 지나며</h2>
-        <p class="closing" data-i18n="resultClosing">
-          우리는 각자의 방식으로 하루를 지나갑니다.<br />
-          서 있는 자리도 조금씩 다를 뿐이고,<br />
-          오늘은 그 자리 그대로 지나가도 괜찮습니다.
-        </p>
-      </div>
- 
-      <p id="result-hint" class="click-hint" data-i18n="hintNext">
-        빈 공간을 클릭하면 다음 화면으로 넘어갑니다.
-      </p>
     </div>
+
+    <div class="result-main">
+      <div id="score-pill" class="score-pill"></div>
+      <p id="band-label" class="band-label"></p>
+      <p id="message" class="message"></p>
+    </div>
+  </div>
+
+  <!-- 오늘의 행동 한 가지 -->
+  <div class="result-step" data-step="2">
+    <h2 data-i18n="resultAction">오늘의 행동 한 가지</h2>
+    <p id="action-text" class="action-text-large"></p>
+  </div>
+
+  <!-- 오늘을 위한 장면 하나 -->
+  <div class="result-step" data-step="3">
+    <h2 data-i18n="resultScene">오늘을 위한 장면 하나</h2>
+    <p id="scene-text" class="scene-text scene-large"></p>
+  </div>
+
+  <!-- 다른 자리들도 이렇게 흐릅니다 -->
+  <div class="result-step" data-step="4">
+    <h2 data-i18n="resultOtherBands">다른 자리들도 이렇게 흐릅니다</h2>
+    <div id="bands-summary" class="bands-summary"></div>
+  </div>
+
+  <!-- 이 자리에서 앞으로 -->
+  <div class="result-step" data-step="5">
+    <h2 data-i18n="resultFuture">이 자리에서 앞으로</h2>
+    <p id="future-text" class="future-text"></p>
+  </div>
+
+  <!-- 마지막 문장 -->
+  <div class="result-step" data-step="6">
+    <h2 data-i18n="resultClosingTitle">오늘의 위치를 지나며</h2>
+    <p class="closing" data-i18n="resultClosing">
+      우리는 각자의 방식으로 하루를 지나갑니다.<br />
+      서 있는 자리도 조금씩 다를 뿐이고,<br />
+      오늘은 그 자리 그대로 지나가도 괜찮습니다.
+    </p>
+  </div>
+
+  <p id="result-hint" class="click-hint" data-i18n="hintNext">
+    빈 공간을 클릭하면 다음 화면으로 넘어갑니다.
+  </p>
+</div>
+```
+
   </section>
- 
+
   <!-- 2단계: 기운 지도 테스트 -->
- 
+
   <section id="energy-test" class="overlay">
     <div id="energy-panel" class="panel energy-panel">
       <!-- 5문항 -->
@@ -175,76 +330,75 @@
         <p class="energy-desc" data-i18n="energyDesc">
           각 문장을 읽고, 지금의 나와 가장 가까운 정도로 바를 움직여 주세요.
         </p>
- 
-        <hr class="energy-separator" />
- 
-        <p id="energy-mode-label" class="energy-mode-label"></p>
-        <p id="energy-question-text" class="energy-question"></p>
- 
-        <div class="energy-scale-labels">
-          <span data-i18n="energyNo">아니오</span>
-          <span data-i18n="energyYes">네</span>
-        </div>
- 
-        <input
-          id="energy-slider"
-          type="range"
-          min="0"
-          max="100"
-          value="50"
-          class="energy-slider"
-        />
- 
-        <p class="energy-value">
-          <span data-i18n="currentValue">지금 값:</span> <span id="energy-value">50</span> / 100
-        </p>
- 
-        <button id="energy-next" class="primary-btn energy-next-btn" data-i18n="btnNext">다음</button>
-      </div>
- 
-      <!-- 오각형 속 점 결과-->
-      <div class="energy-step" data-step="2">
-        <h2 class="energy-title" data-i18n="energyBalanceTitle">지금의 균형점</h2>
-        <p class="energy-desc center" data-i18n="energyBalanceDesc">
-          다섯 방향에서의 값을 한 눈에 볼 수 있도록, 오늘의 에너지 모양을 한 번 그려드립니다.
-        </p>
-        <canvas id="energy-static-canvas" width="480" height="480"></canvas>
-        <p class="energy-note" data-i18n="energyBalanceNote">
-          이 도형은 오늘 하루에 찍힌 한 장면일 뿐입니다. 내일은 다른 모양일 수 있습니다.
-        </p>
-      </div>
- 
-      <!--  로딩 -->
-      <div class="energy-step" data-step="3">
-        <h2 class="energy-title" data-i18n="energyLoadingTitle">흐름은 이어집니다..</h2>
-        <p class="energy-desc center"></p>
-        <div class="energy-loading-circle"></div>
-      </div>
- 
-      <!-- 부유하는 점 애니메이션 -->
-      <div class="energy-step" data-step="4">
-        <h2 class="energy-title" data-i18n="energyFlowTitle">흐름을 관찰하세요</h2>
-        <canvas id="energy-flow-canvas" width="520" height="520"></canvas>
-        <p class="energy-note" data-i18n="energyFlowNote">
-          점은 이렇게 여러 곳을 지나며, 결국 당신만의 방향을 만들어 갑니다.
-        </p>
-      </div>
- 
-      <!-- 한 문장-->
-      <div class="energy-step" data-step="5">
-        <h2 class="energy-title" data-i18n="energyFinalTitle">오늘의 한 문장</h2>
-        <p id="energy-final-line" class="energy-final-line"></p>
-      </div>
- 
-      <p id="energy-hint" class="click-hint" data-i18n="hintNext">
-        빈 공간을 클릭하면 다음 화면으로 넘어갑니다.
-      </p>
+
+```
+    <hr class="energy-separator" />
+
+    <p id="energy-mode-label" class="energy-mode-label"></p>
+    <p id="energy-question-text" class="energy-question"></p>
+
+    <div class="energy-scale-labels">
+      <span data-i18n="energyNo">아니오</span>
+      <span data-i18n="energyYes">네</span>
     </div>
+
+    <input
+      id="energy-slider"
+      type="range"
+      min="0"
+      max="100"
+      value="50"
+      class="energy-slider"
+    />
+
+    <p class="energy-value">
+      <span data-i18n="currentValue">지금 값:</span>
+      <span id="energy-value">50</span> / 100
+    </p>
+
+    <button id="energy-next" class="primary-btn energy-next-btn" data-i18n="btnNext">다음</button>
+  </div>
+
+  <!-- 오각형 속 점 결과 -->
+  <div class="energy-step" data-step="2">
+    <h2 class="energy-title" data-i18n="energyBalanceTitle">지금의 균형점</h2>
+    <p class="energy-desc center" data-i18n="energyBalanceDesc">
+      다섯 방향에서의 값을 한 눈에 볼 수 있도록, 오늘의 에너지 모양을 한 번 그려드립니다.
+    </p>
+    <canvas id="energy-static-canvas" width="480" height="480"></canvas>
+    <p class="energy-note" data-i18n="energyBalanceNote">
+      이 도형은 오늘 하루에 찍힌 한 장면일 뿐입니다. 내일은 다른 모양일 수 있습니다.
+    </p>
+  </div>
+
+  <!-- 로딩 -->
+  <div class="energy-step" data-step="3">
+    <h2 class="energy-title" data-i18n="energyLoadingTitle">흐름은 이어집니다..</h2>
+    <p class="energy-desc center"></p>
+    <div class="energy-loading-circle"></div>
+  </div>
+
+  <!-- 부유하는 점 애니메이션 -->
+  <div class="energy-step" data-step="4">
+    <h2 class="energy-title" data-i18n="energyFlowTitle">흐름을 관찰하세요</h2>
+    <canvas id="energy-flow-canvas" width="520" height="520"></canvas>
+    <p class="energy-note" data-i18n="energyFlowNote">
+      점은 이렇게 여러 곳을 지나며, 결국 당신만의 방향을 만들어 갑니다.
+    </p>
+  </div>
+
+  <!-- 한 문장 -->
+  <div class="energy-step" data-step="5">
+    <h2 class="energy-title" data-i18n="energyFinalTitle">오늘의 한 문장</h2>
+    <p id="energy-final-line" class="energy-final-line"></p>
+  </div>
+
+  <p id="energy-hint" class="click-hint" data-i18n="hintNext">
+    빈 공간을 클릭하면 다음 화면으로 넘어갑니다.
+  </p>
+</div>
+```
+
   </section>
 </body>
 </html>
- 
-
-
-
-
